@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html class="js-focus-visible" data-js-focus-visible>
+<head><html class="js-focus-visible" data-js-focus-visible=""><head><style type="text/css">.ProseMirror {
+  position: relative;
+}
+
+.ProseMirror {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  -webkit-font-variant-ligatures: none;
+  font-variant-ligatures: none;
+}
+
+.ProseMirror pre {
+  white-space: pre-wrap;
+}
+
+.ProseMirror-gapcursor {
+  display: none;
+  pointer-events: none;
+  position: absolute;
+}
+
+.ProseMirror-gapcursor:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2px;
+  width: 20px;
+  border-top: 1px solid black;
+  animation: ProseMirror-cursor-blink 1.1s steps(2, start) infinite;
+}
+
+@keyframes ProseMirror-cursor-blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+.ProseMirror-hideselection *::selection {
+  background: transparent;
+}
+
+.ProseMirror-hideselection *::-moz-selection {
+  background: transparent;
+}
+
+.ProseMirror-hideselection * {
+  caret-color: transparent;
+}
+
+.ProseMirror-focused .ProseMirror-gapcursor {
+  display: block;
+}
+</style>
+	<meta charset="UTF-8">
+
+<meta name="csrf-token" content="c6128421-bd31-4d3a-a5d1-04bbc7d77c5c">
+<meta name="google-analytics-id" content="UA-69935771-26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#2b5797">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+
+
+    <!-- Google Tag Manager -->
+    <script type="text/javascript" async="" src="https://d14jnfavjicsbe.cloudfront.net/client.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="//tag.getdrip.com/2607659.js"></script><script type="text/javascript" async="" src="https://static.hotjar.com/c/hotjar-841363.js?sv=7"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-N24X7V9"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-N24X7V9');</script>
+    <!-- End Google Tag Manager -->
+
+	<link rel="stylesheet" href="/dist/styles-588406301077581739e82cfee3b35fb6.css">
+	<link rel="stylesheet" href="/dist/case-study-view-877e32ea78b68f6bf4413081f52ff622.css">
+	<link rel="stylesheet" href="/dist/case-study-editor-f9b3affaf48e5ea34f162febb1ed32a4.css">
+	<title>UX folio - Portfolio Editor</title>
+<script async="" src="https://script.hotjar.com/modules.734bd4b678d25642f35b.js" charset="utf-8"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><style type="text/css">
+.vdr[data-v-2bcd502f] {
+  touch-action: none;
+  position: absolute;
+  box-sizing: border-box;
+}
+.handle[data-v-2bcd502f] {
+  box-sizing: border-box;
+  display: none;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  font-size: 1px;
+  background: #EEE;
+  border: 1px solid #333;
+}
+.handle-tl[data-v-2bcd502f] {
+  top: -10px;
+  left: -10px;
+  cursor: nw-resize;
+}
+.handle-tm[data-v-2bcd502f] {
+  top: -10px;
+  left: 50%;
+  margin-left: -5px;
+  cursor: n-resize;
+}
+.handle-tr[data-v-2bcd502f] {
+  top: -10px;
+  right: -10px;
+  cursor: ne-resize;
+}
+.handle-ml[data-v-2bcd502f] {
+  top: 50%;
+  margin-top: -5px;
+  left: -10px;
+  cursor: w-resize;
+}
+.handle-mr[data-v-2bcd502f] {
+  top: 50%;
+  margin-top: -5px;
+  right: -10px;
+  cursor: e-resize;
+}
+.handle-bl[data-v-2bcd502f] {
+  bottom: -10px;
+  left: -10px;
+  cursor: sw-resize;
+}
+.handle-bm[data-v-2bcd502f] {
+  bottom: -10px;
+  left: 50%;
+  margin-left: -5px;
+  cursor: s-resize;
+}
+.handle-br[data-v-2bcd502f] {
+  bottom: -10px;
+  right: -10px;
+  cursor: se-resize;
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+[class*="handle-"][data-v-2bcd502f]:before {
+    content: '';
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    top: -10px;
+    position: absolute;
+}
+}
+</style><style type="text/css">@charset "UTF-8";
+div[id^="font-picker"] {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); }
+  div[id^="font-picker"] * {
+    box-sizing: border-box; }
+  div[id^="font-picker"] p {
+    margin: 0;
+    padding: 0; }
+  div[id^="font-picker"] button {
+    background: none;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    font-size: inherit;
+    outline: none; }
+  div[id^="font-picker"] .dropdown-button {
+    height: 35px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    background: #CBCBCB; }
+    div[id^="font-picker"] .dropdown-button:hover, div[id^="font-picker"] .dropdown-button.expanded, div[id^="font-picker"] .dropdown-button:focus {
+      background: #bebebe; }
+    div[id^="font-picker"] .dropdown-button .dropdown-font-name {
+      overflow: hidden;
+      white-space: nowrap; }
+  div[id^="font-picker"] .dropdown-icon {
+    margin-left: 10px; }
+
+@-webkit-keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+    div[id^="font-picker"] .dropdown-icon.loading:before {
+      content: '';
+      display: block;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      border: 2px solid #b2b2b2;
+      border-top-color: black;
+      -webkit-animation: spinner 0.6s linear infinite;
+              animation: spinner 0.6s linear infinite; }
+    div[id^="font-picker"] .dropdown-icon.finished:before {
+      content: '';
+      display: block;
+      height: 0;
+      width: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 6px solid black;
+      transition: -webkit-transform 0.3s;
+      transition: transform 0.3s;
+      transition: transform 0.3s, -webkit-transform 0.3s;
+      margin: 0 2px; }
+    div[id^="font-picker"] .dropdown-icon.error:before {
+      content: '⚠'; }
+  div[id^="font-picker"] .dropdown-button.expanded .dropdown-icon.finished:before {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg); }
+  div[id^="font-picker"] ul {
+    position: absolute;
+    z-index: 1;
+    max-height: 0;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0;
+    padding: 0;
+    background: #EAEAEA;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    transition: 0.3s; }
+    div[id^="font-picker"] ul.expanded {
+      max-height: 200px; }
+    div[id^="font-picker"] ul li {
+      height: 35px;
+      list-style: none; }
+      div[id^="font-picker"] ul li button {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        white-space: nowrap; }
+        div[id^="font-picker"] ul li button:hover, div[id^="font-picker"] ul li button:focus {
+          background: #dddddd; }
+        div[id^="font-picker"] ul li button.active-font {
+          background: #d1d1d1; }
+</style><style type="text/css">.medium-zoom-overlay{position:fixed;top:0;right:0;bottom:0;left:0;opacity:0;transition:opacity .3s;will-change:opacity}.medium-zoom--opened .medium-zoom-overlay{cursor:pointer;cursor:zoom-out;opacity:1}.medium-zoom-image{cursor:pointer;cursor:zoom-in;transition:transform .3s cubic-bezier(.2,0,.2,1)!important}.medium-zoom-image--hidden{visibility:hidden}.medium-zoom-image--opened{position:relative;cursor:pointer;cursor:zoom-out;will-change:transform}</style><link href="https://www.google-analytics.com" rel="preconnect"><script async="" src="https://www.google-analytics.com/analytics.js" charset="utf-8"></script><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Book-cd7d2bcec649b1243839a15d5eb8f0a3.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 500;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Medium-d74eac43c78bd5852478998ce63dceb3.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Bold-83b8ceaf77f49c7cffa44107561909e4.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 900;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Black-bf067ecb8aa777ceb6df7d72226febca.woff2') format('woff2');
+}</style><link id="freshworks-frame" rel="stylesheet" href="https://widget.freshworks.com/widgetBase/static/media/frame.d7ae132c.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700;800;900&amp;display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;800;900&amp;display=swap"></head>
+<body>
+
+	<main>
+		<div><div class="ufo--nav-bar ufo--nav-bar-fw"><div class="logo"></div> <button class="btn btn--back" style="display: none;">Back</button> <button class="btn btn--nav-item btn--style">Design</button> <div class="ufo--nav-bar-btn-tooltip"><button class="btn btn--nav-item btn--settings">Settings</button> <!----></div> <div class="menu-tab selected-portfolio">
+            MaKenna Berger's Portfolio
+            <!----></div> <nav class="nav"><div class="save-indicator"><span class="saved">Saved</span></div> <ul class="navigation"><li class="preview"><button><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="13" viewBox="0 0 20 13"><defs><path d="M0 0h22v22H0z" id="reuse-0"></path></defs><defs><path id="view" d="M11 18c-2.466 0-5.66-2.063-9.664-6.156L1 11.5l.336-.344C5.34 7.063 8.534 5 11 5c2.466 0 5.66 2.063 9.664 6.156L21 11.5l-.336.344C16.66 15.937 13.466 18 11 18zm0-1c2.032 0 4.915-1.824 8.575-5.5C15.915 7.824 13.032 6 11 6c-2.032 0-4.915 1.824-8.575 5.5C6.085 15.176 8.968 17 11 17zm0-2c-1.995 0-3.612-1.567-3.612-3.5S9.005 8 11 8s3.612 1.567 3.612 3.5S12.995 15 11 15zm0-1c1.425 0 2.58-1.12 2.58-2.5S12.425 9 11 9s-2.58 1.12-2.58 2.5S9.575 14 11 14z"></path></defs><g fill="none" fill-rule="evenodd" transform="translate(-1 -5)"><use xlink:href="#reuse-0"></use><mask id="view-b" fill="#fff"><use xlink:href="#view"></use></mask><use fill="#fff" fill-rule="nonzero" xlink:href="#view"></use><g fill="#fff" mask="url(#view-b)"><use xlink:href="#reuse-0"></use></g></g></svg>
+                        View Portfolio
+                    </button></li> <li class="sharing"><button><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20"><defs></defs><defs><path id="share-icon" d="M7.603 9.873A2.495 2.495 0 005.375 8.5a2.5 2.5 0 000 5 2.495 2.495 0 002.233-1.384 2.481 2.481 0 00-.005-2.243zm.644 3.122A3.492 3.492 0 015.375 14.5a3.5 3.5 0 010-7c1.167 0 2.229.577 2.872 1.505l5.057-2.53a3.5 3.5 0 113.32 2.4 3.493 3.493 0 01-2.872-1.505L8.695 9.899a3.46 3.46 0 010 2.202l5.057 2.529a3.493 3.493 0 012.873-1.505 3.5 3.5 0 010 7c-2.43 0-4.065-2.394-3.322-4.601l-5.056-2.529zm8.378-5.12a2.5 2.5 0 10-2.5-2.5c0 .39.092.768.266 1.117a2.497 2.497 0 002.234 1.383zm-2.24 7.644a2.5 2.5 0 102.24-1.394 2.497 2.497 0 00-2.24 1.394z"></path></defs><g fill="#fff" fill-rule="evenodd" transform="translate(-1 -1)"><mask id="share-icon-b"><use xlink:href="#share-icon"></use></mask><use fill-rule="nonzero" xlink:href="#share-icon"></use><g mask="url(#share-icon-b)"><path d="M0 0h22v22H0z"></path></g></g></svg>
+                        Share
+                    </button></li></ul></nav> <div class="user-dropdown-menu"><div class="profile-picture"><img src="/dist/images/icon-image-profile-empty.svg"></div> <!----></div></div> <div portfolioid="f142ddf2-4e8e-445a-9213-013eb5ab5be7"><div class="ufo--portfolio-container"><div class="profile-page profile-editor profile_theme_five" style="--bgColor:#FFFFFF; --bgColor00:#FFFFFF00; --bgColor90:#FFFFFFE6;"><div class="ufo--container"><div class="ufo--user-profile-info"><div class="profile-info profile_theme_five has-picture" style="--h1Font:&quot;Muli&quot;; --h1Color:#424242; --h1Size:56px; --h1Height:62px; --h1Weight:bold; --h1Style:normal; --h2Font:&quot;Muli&quot;; --h2Color:#424242; --h2Size:36px; --h2Height:39px; --h2Weight:bold; --h2Style:normal; --p1Font:&quot;Muli&quot;; --p1Color:#424242; --p1Size:24px; --p1Height:36px; --p1Weight:normal; --p1Style:normal; --projectTitleFont:&quot;Muli&quot;; --projectTitleColor:null; --projectTitleSize:24px; --projectTitleHeight:34px; --projectTitleWeight:normal; --projectTitleStyle:normal; --projectSubTitleFont:&quot;Muli&quot;; --projectSubTitleColor:null; --projectSubTitleSize:24px; --projectSubTitleHeight:34px; --projectSubTitleWeight:normal; --projectSubTitleStyle:normal; --buttonFont:&quot;Muli&quot;; --buttonColor:#282a2b; --buttonSize:14px; --buttonHeight:17px; --buttonWeight:normal; --buttonStyle:normal; --borderColor:#282a2b33; --bgColor:#FFFFFF;"><div class="profile-hero" style="--bgColor:#FFFFFF; --bgColor00:#FFFFFF00; --bgColor90:#FFFFFFE6;"><div class="profile-cover profile-picture"><img src="https://storage.googleapis.com/uxfolio/60306386ff31b100033f52e5/collections/f142ddf2-4e8e-445a-9213-013eb5ab5be7/zm8eF9YZ0x1HpuMa.png"> <label class="upload-button"></label></div></div> <div class="ufo--site-nav-container"><!----> <!--fragment#dea9a64518#head--><div class="profile-button selected" fragment="dea9a64518" button-path="/" show-modal="showWork"><button tooltip="Edit Work Page" tooltip-position="bottom" contenteditable="false" class="btn has-tooltip active">Work</button> <button class="btn rename-page"><span tooltip="Rename Menu" tooltip-position="bottom" class="has-tooltip"><img alt="Rename menu" src="/dist/images/icon-edit-small.svg"></span></button></div> <div class="profile-button" fragment="dea9a64518" button-path="/about" show-modal="showAbout"><button tooltip="Edit About Page" tooltip-position="bottom" contenteditable="false" class="btn has-tooltip">About</button> <button class="btn rename-page"><span tooltip="Rename Menu" tooltip-position="bottom" class="has-tooltip"><img alt="Rename menu" src="/dist/images/icon-edit-small.svg"></span></button></div> <div class="profile-button" fragment="dea9a64518" button-path="/contact"><button tooltip="Edit Contact" tooltip-position="bottom" contenteditable="false" class="btn has-tooltip">Contact</button> <button class="btn rename-page"><span tooltip="Rename Menu" tooltip-position="bottom" class="has-tooltip"><img alt="Rename menu" src="/dist/images/icon-edit-small.svg"></span></button></div> <div class="profile-button" fragment="dea9a64518" show-modal="SetCvModal"><button tooltip="Edit Resumé" tooltip-position="bottom" contenteditable="false" class="btn has-tooltip">Resumé</button> <button class="btn rename-page"><span tooltip="Rename Menu" tooltip-position="bottom" class="has-tooltip"><img alt="Rename menu" src="/dist/images/icon-edit-small.svg"></span></button></div> <div class="profile-button" fragment="dea9a64518" show-modal="SetCustomMenuItemModal"><button tooltip="Add Custom Link" tooltip-position="bottom" contenteditable="false" class="btn has-tooltip add">Link</button> <!----></div><!--fragment#dea9a64518#tail--> <div class="profile-links"><div class="social-content"><div tooltip="Edit Social Links" tooltip-position="bottom" class="ufo--site-nav-social editor has-tooltip"><a class="instagram"><span>instagram</span></a><a class="linkedin"><span>linkedin</span></a><!----><!----><!----> <!----></div></div></div></div> <div class="profile-bio"><div class="profile-about"><div class="ufo--text-editor"><div data-v-617df324="" class="ufo--text-editor-toolbar" style="left: 0px; bottom: 0px;"><button data-v-617df324="" class="ufo--text-editor-button is-active"><img data-v-01853414="" src="/text-editor-icons/icon-text-h1.svg" alt=""></button><button data-v-617df324="" class="ufo--text-editor-button"><img data-v-01853414="" src="/text-editor-icons/icon-text-h2.svg" alt=""></button><button data-v-617df324="" class="ufo--text-editor-button"><img data-v-01853414="" src="/text-editor-icons/icon-text-p.svg" alt=""></button> <div data-v-617df324="" class="toolbar-separator"></div> <!----> <button data-v-617df324="" class="ufo--text-editor-button"><img data-v-01853414="" src="/text-editor-icons/icon-text-left.svg" alt=""></button><button data-v-617df324="" class="ufo--text-editor-button"><img data-v-01853414="" src="/text-editor-icons/icon-text-center.svg" alt=""></button><button data-v-617df324="" class="ufo--text-editor-button"><img data-v-01853414="" src="/text-editor-icons/icon-text-right.svg" alt=""></button> <div data-v-617df324="" class="toolbar-separator"></div> <button data-v-617df324="" class="ufo--text-editor-button link"><img data-v-01853414="" data-v-617df324="" src="/text-editor-icons/icon-text-link.svg" alt=""></button> <!----> <div data-v-617df324="" class="toolbar-separator"></div> <button data-v-617df324="" class="ufo--text-editor-button style-panel"><img data-v-01853414="" data-v-617df324="" src="/text-editor-icons/icon-style.svg" alt=""></button> <!----></div> <div class="ufo--text-area"><div contenteditable="true" tabindex="0" class="ProseMirror"><h1>MaKenna Berger</h1><p><br></p><h2>Research + Design</h2></div></div></div></div> <button class="e-btn--edit e-btn--edit-large e-btn--update-media">Update</button></div></div></div> <!----> <div class="ufo--user-projects-list"><div class="ufo--page"> <!----> <!----></div> <div class="ufo--user-projects" style="--h1Font:&quot;Muli&quot;; --h1Color:#424242; --h1Size:56px; --h1Height:62px; --h1Weight:bold; --h1Style:normal; --h2Font:&quot;Muli&quot;; --h2Color:#424242; --h2Size:36px; --h2Height:39px; --h2Weight:bold; --h2Style:normal; --p1Font:&quot;Muli&quot;; --p1Color:#424242; --p1Size:24px; --p1Height:36px; --p1Weight:normal; --p1Style:normal; --projectTitleFont:&quot;Muli&quot;; --projectTitleColor:null; --projectTitleSize:24px; --projectTitleHeight:34px; --projectTitleWeight:normal; --projectTitleStyle:normal; --projectSubTitleFont:&quot;Muli&quot;; --projectSubTitleColor:null; --projectSubTitleSize:24px; --projectSubTitleHeight:34px; --projectSubTitleWeight:normal; --projectSubTitleStyle:normal; --buttonFont:&quot;Muli&quot;; --buttonColor:#282a2b; --buttonSize:14px; --buttonHeight:17px; --buttonWeight:normal; --buttonStyle:normal; --borderColor:#282a2b33;"><div class="project-list-type public"><span>My Case Studies</span> <button tooltip="Create projects first to rearrange" tooltip-position="left" class="btn btn--primary btn--mini thumbnail-layout-button">Change Thumbnail Layout</button> <button tooltip="Create projects first to rearrange" tooltip-position="left" class="btn btn--primary btn--mini rearrange-button">Rearrange</button></div> <div class="projects-list"><div data-pi="0" class="project title-is--hidden title-is-- thumbnail-is--small title-align-- title-justify-- title-is--light"><!----> <div class="project-layer"><div class="project-edit-trigger"><span class="trigger-label">Options</span> <ul class="project-edit-nav"><li class="thumbnail">Set Thumbnail</li> <li class="remove-thumbnail">Remove Thumbnail</li> <li class="context-separator"></li> <li class="review">Ask for Review</li> <li class="set-password">Set Password</li> <li class="publish">Publish</li> <li class="context-separator"></li> <li class="duplicate">Duplicate</li> <li class="delete">Delete</li></ul></div> <div class="btn btn--primary">Edit case study</div> <div class="project-status-display"><span class="draft">
+                        Draft
+                    </span> <!----></div></div> <div class="project-name"><div class="ufo--project-title-container"><!----> <textarea rows="1" class="project-title" style="--projectTitleFont:&quot;Muli&quot;; --projectTitleColor:null; --projectTitleSize:24px; --projectTitleHeight:34px; --projectTitleWeight:normal; --projectTitleStyle:normal; overflow: hidden; overflow-wrap: break-word;"></textarea></div> <div class="ufo--project-title-container"><!----> <textarea rows="1" class="project-subtitle" style="--projectSubTitleFont:&quot;Muli&quot;; --projectSubTitleColor:null; --projectSubTitleSize:24px; --projectSubTitleHeight:34px; --projectSubTitleWeight:normal; --projectSubTitleStyle:normal; overflow: hidden; overflow-wrap: break-word;"></textarea></div></div> <div class="image-container" style="background-color: rgb(222, 251, 254);"><img src="https://storage.googleapis.com/uxfolio/60306386ff31b100033f52e5/6030653dff31b100033f52e8/VZJKNFDubWcINfiB.png"></div></div><div data-pi="1" class="project title-is--hidden title-is-- thumbnail-is--small title-align-- title-justify-- title-is--light"><!----> <div class="project-layer"><div class="project-edit-trigger"><span class="trigger-label">Options</span> <ul class="project-edit-nav"><li class="thumbnail">Set Thumbnail</li> <li class="remove-thumbnail">Remove Thumbnail</li> <li class="context-separator"></li> <li class="review">Ask for Review</li> <li class="set-password">Set Password</li> <li class="publish">Publish</li> <li class="context-separator"></li> <li class="duplicate">Duplicate</li> <li class="delete">Delete</li></ul></div> <div class="btn btn--primary">Edit case study</div> <div class="project-status-display"><span class="draft">
+                        Draft
+                    </span> <!----></div></div> <div class="project-name"><div class="ufo--project-title-container"><!----> <textarea rows="1" class="project-title" style="--projectTitleFont:&quot;Muli&quot;; --projectTitleColor:null; --projectTitleSize:24px; --projectTitleHeight:34px; --projectTitleWeight:normal; --projectTitleStyle:normal; overflow: hidden; overflow-wrap: break-word;"></textarea></div> <div class="ufo--project-title-container"><!----> <textarea rows="1" class="project-subtitle" style="--projectSubTitleFont:&quot;Muli&quot;; --projectSubTitleColor:null; --projectSubTitleSize:24px; --projectSubTitleHeight:34px; --projectSubTitleWeight:normal; --projectSubTitleStyle:normal; overflow: hidden; overflow-wrap: break-word;"></textarea></div></div> <div class="image-container" style="background-color: rgb(33, 34, 39);"><img src="https://storage.googleapis.com/uxfolio/60306386ff31b100033f52e5/606644551403e80003b8ead6/wPtfC4li6LKnwfEa.png"></div></div> <div class="project add-project title-is--hidden title-is-- thumbnail-is--small"><div class="add-project-content"><div class="add-sign"></div> <div class="title">Working on an awesome case study?</div> <div class="subtitle"> Start documenting it now! It will be quicker to finalize your case study later on.</div> <button class="btn btn--primary">Add new case study</button></div></div></div></div></div></div></div> <div class="profile-footer profile_theme_five" style="--borderColor:#42424233; --bgColor:#FFFFFF; --buttonColor:#282a2b;"><div class="ufo--container"><div class="profile-footer-content"><a href="https://www.instagram.com/healthdesigndigest/" target="_blank" class="footer-url">
+                            instagram
+                        </a><a href="https://www.linkedin.com/in/makennaberger/" target="_blank" class="footer-url">
+                            linkedin
+                        </a><!----><!----><!----></div></div></div> <!----></div> <!----></div> <!----> <!----></div>
+	</main>
+
+    <script src="/dist/bundle-891f53b68bdd57bfe5ebdf5006891fbe.js"></script>
+<script type="text/javascript" id="">var _dcq=_dcq||[],_dcs=_dcs||{};_dcs.account="2607659";(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="//tag.getdrip.com/2607659.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+
+<script type="text/javascript" id="">(function(){function d(b){return function(a){return-1==b.filter(e).map(f).indexOf(a)}}function e(b){return"gtm.formSubmit"===b.event}function f(b){return b["gtm.element"].name}function g(b){return{name:b,history:c[b]||[]}}function h(b){return 0<b.history.length}if("undefined"!==typeof document.querySelectorAll){window.addEventListener("beforeunload",function(b){Object.keys(c).filter(d(window.dataLayer)).map(g).filter(h).forEach(function(a){window.dataLayer.push({event:"formAbandonment",eventCategory:"Form Abandonment",
+eventAction:a.history.join(" \x3e ")})})});var c={};window.addEventListener("load",function(){document.addEventListener("change",function(b){var a=b.target;a&&a.tagName&&("INPUT"==a.tagName.toUpperCase()||"TEXTAREA"==a.tagName.toUpperCase()||"SELECT"==a.tagName.toUpperCase())&&(b=a.getAttribute("name"),(a=a.form)&&b&&(a=a.getAttribute("name"),"undefined"==typeof c[a]&&(c[a]=[]),c[a].slice(-1)!=b&&c[a].push(b)))})})}})();</script>
+
+
+<link rel="stylesheet" type="text/css" href="/gdpr/css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script src="/gdpr/js/templates.js"></script>
+<script src="/gdpr/js/script.js"></script>
+<script src="/gdpr/langs/en.js"></script>
+
+<button id="gdpr-settings-button" style="display: none;" class="gdpr-cookie-notice-settings-button">GDPR</button>
+
+</script>
+
+
+<script type="text/javascript" id="">window.fwSettings={widget_id:67000001817};!function(){if("function"!=typeof window.FreshworksWidget){var a=function(){a.q.push(arguments)};a.q=[];window.FreshworksWidget=a}}();</script>
+<script type="text/javascript" id="" src="https://widget.freshworks.com/widgets/67000001817.js"></script><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="https://vars.hotjar.com/box-25a418976ea02a6f393fbbe77cec94bb.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><div id="freshworks-container" data-html2canvas-ignore="true" style="width: 0px; height: 0px; bottom: 0px; right: 0px; z-index: 2147483647;"><div aria-live="polite"><iframe allowfullscreen="" id="launcher-frame" data-testid="launcher-frame" style="left: 16px; bottom: 16px; border: none; position: fixed; min-width: 104px; max-width: 156px; height: 56px; z-index: 2147483000; visibility: visible;"></iframe><iframe allowfullscreen="" id="lightbox-frame" data-testid="lightbox-frame" style="display: none;"></iframe></div></div><iframe title="FreshworksWidget" id="freshworks-frame" data-html2canvas-ignore="true" style="display: none;"></iframe></body><loom-container id="lo-engage-ext-container"><div></div><loom-shadow classname="resolved"></loom-shadow></loom-container></html></head>
+<body>
+
+	<main>
+		<div><div class="ufo--nav-bar ufo--nav-bar-fw"><div class="logo"></div> <button class="btn btn--back" style="display: none;">Back</button> <button class="btn btn--nav-item btn--style">Design</button> <div class="ufo--nav-bar-btn-tooltip"><button class="btn btn--nav-item btn--settings">Settings</button> <!----></div> <div class="menu-tab selected-portfolio">
+            MaKenna Berger's Portfolio
+            <!----></div> <nav class="nav"><div class="save-indicator"><span class="saved">Saved</span></div> <ul class="navigation"><li class="preview"><button><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="13" viewBox="0 0 20 13"><defs><path d="M0 0h22v22H0z" id="reuse-0"></path></defs><defs><path id="view" d="M11 18c-2.466 0-5.66-2.063-9.664-6.156L1 11.5l.336-.344C5.34 7.063 8.534 5 11 5c2.466 0 5.66 2.063 9.664 6.156L21 11.5l-.336.344C16.66 15.937 13.466 18 11 18zm0-1c2.032 0 4.915-1.824 8.575-5.5C15.915 7.824 13.032 6 11 6c-2.032 0-4.915 1.824-8.575 5.5C6.085 15.176 8.968 17 11 17zm0-2c-1.995 0-3.612-1.567-3.612-3.5S9.005 8 11 8s3.612 1.567 3.612 3.5S12.995 15 11 15zm0-1c1.425 0 2.58-1.12 2.58-2.5S12.425 9 11 9s-2.58 1.12-2.58 2.5S9.575 14 11 14z"></path></defs><g fill="none" fill-rule="evenodd" transform="translate(-1 -5)"><use xlink:href="#reuse-0"></use><mask id="view-b" fill="#fff"><use xlink:href="#view"></use></mask><use fill="#fff" fill-rule="nonzero" xlink:href="#view"></use><g fill="#fff" mask="url(#view-b)"><use xlink:href="#reuse-0"></use></g></g></svg>
+                        View Portfolio
+                    </button></li> <li class="sharing"><button><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20"><defs></defs><defs><path id="share-icon" d="M7.603 9.873A2.495 2.495 0 005.375 8.5a2.5 2.5 0 000 5 2.495 2.495 0 002.233-1.384 2.481 2.481 0 00-.005-2.243zm.644 3.122A3.492 3.492 0 015.375 14.5a3.5 3.5 0 010-7c1.167 0 2.229.577 2.872 1.505l5.057-2.53a3.5 3.5 0 113.32 2.4 3.493 3.493 0 01-2.872-1.505L8.695 9.899a3.46 3.46 0 010 2.202l5.057 2.529a3.493 3.493 0 012.873-1.505 3.5 3.5 0 010 7c-2.43 0-4.065-2.394-3.322-4.601l-5.056-2.529zm8.378-5.12a2.5 2.5 0 10-2.5-2.5c0 .39.092.768.266 1.117a2.497 2.497 0 002.234 1.383zm-2.24 7.644a2.5 2.5 0 102.24-1.394 2.497 2.497 0 00-2.24 1.394z"></path></defs><g fill="#fff" fill-rule="evenodd" transform="translate(-1 -1)"><mask id="share-icon-b"><use xlink:href="#share-icon"></use></mask><use fill-rule="nonzero" xlink:href="#share-icon"></use><g mask="url(#share-icon-b)"><path d="M0 0h22v22H0z"></path></g></g></svg>
+                        Share
+                    </button></li></ul></nav> <div class="user-dropdown-menu"><div class="profile-picture"><img src="/dist/images/icon-image-profile-empty.svg"></div> <!----></div></div> <div portfolioid="f142ddf2-4e8e-445a-9213-013eb5ab5be7"><div class="ufo--portfolio-container"><div class="profile-page profile-editor profile_theme_five" style="--bgColor:#FFFFFF; --bgColor00:#FFFFFF00; --bgColor90:#FFFFFFE6;"><div class="ufo--container"><div class="ufo--user-profile-info"><div class="profile-info profile_theme_five has-picture" style="--h1Font:&quot;Muli&quot;; --h1Color:#424242; --h1Size:56px; --h1Height:62px; --h1Weight:bold; --h1Style:normal; --h2Font:&quot;Muli&quot;; --h2Color:#424242; --h2Size:36px; --h2Height:39px; --h2Weight:bold; --h2Style:normal; --p1Font:&quot;Muli&quot;; --p1Color:#424242; --p1Size:24px; --p1Height:36px; --p1Weight:normal; --p1Style:normal; --projectTitleFont:&quot;Muli&quot;; --projectTitleColor:null; --projectTitleSize:24px; --projectTitleHeight:34px; --projectTitleWeight:normal; --projectTitleStyle:normal; --projectSubTitleFont:&quot;Muli&quot;; --projectSubTitleColor:null; --projectSubTitleSize:24px; --projectSubTitleHeight:34px; --projectSubTitleWeight:normal; --projectSubTitleStyle:normal; --buttonFont:&quot;Muli&quot;; --buttonColor:#282a2b; --buttonSize:14px; --buttonHeight:17px; --buttonWeight:normal; --buttonStyle:normal; --borderColor:#282a2b33; --bgColor:#FFFFFF;"><div class="profile-hero" style="--bgColor:#FFFFFF; --bgColor00:#FFFFFF00; --bgColor90:#FFFFFFE6;"><div class="profile-cover profile-picture"><img src="https://storage.googleapis.com/uxfolio/60306386ff31b100033f52e5/collections/f142ddf2-4e8e-445a-9213-013eb5ab5be7/zm8eF9YZ0x1HpuMa.png"> <label class="upload-button"></label></div></div> <div class="ufo--site-nav-container"><!----> <!--fragment#dea9a64518#head--><div class="profile-button selected" fragment="dea9a64518" button-path="/" show-modal="showWork"><button tooltip="Edit Work Page" tooltip-position="bottom" contenteditable="false" class="btn has-tooltip active">Work</button> <button class="btn rename-page"><span tooltip="Rename Menu" tooltip-position="bottom" class="has-tooltip"><img alt="Rename menu" src="/dist/images/icon-edit-small.svg"></span></button></div> <div class="profile-button" fragment="dea9a64518" button-path="/about" show-modal="showAbout"><button tooltip="Edit About Page" tooltip-position="bottom" contenteditable="false" class="btn has-tooltip">About</button> <button class="btn rename-page"><span tooltip="Rename Menu" tooltip-position="bottom" class="has-tooltip"><img alt="Rename menu" src="/dist/images/icon-edit-small.svg"></span></button></div> <div class="profile-button" fragment="dea9a64518" button-path="/contact"><button tooltip="Edit Contact" tooltip-position="bottom" contenteditable="false" class="btn has-tooltip">Contact</button> <button class="btn rename-page"><span tooltip="Rename Menu" tooltip-position="bottom" class="has-tooltip"><img alt="Rename menu" src="/dist/images/icon-edit-small.svg"></span></button></div> <div class="profile-button" fragment="dea9a64518" show-modal="SetCvModal"><button tooltip="Edit Resumé" tooltip-position="bottom" contenteditable="false" class="btn has-tooltip">Resumé</button> <button class="btn rename-page"><span tooltip="Rename Menu" tooltip-position="bottom" class="has-tooltip"><img alt="Rename menu" src="/dist/images/icon-edit-small.svg"></span></button></div> <div class="profile-button" fragment="dea9a64518" show-modal="SetCustomMenuItemModal"><button tooltip="Add Custom Link" tooltip-position="bottom" contenteditable="false" class="btn has-tooltip add">Link</button> <!----></div><!--fragment#dea9a64518#tail--> <div class="profile-links"><div class="social-content"><div tooltip="Edit Social Links" tooltip-position="bottom" class="ufo--site-nav-social editor has-tooltip"><a class="instagram"><span>instagram</span></a><a class="linkedin"><span>linkedin</span></a><!----><!----><!----> <!----></div></div></div></div> <div class="profile-bio"><div class="profile-about"><div class="ufo--text-editor"><div data-v-617df324="" class="ufo--text-editor-toolbar" style="left: 0px; bottom: 0px;"><button data-v-617df324="" class="ufo--text-editor-button is-active"><img data-v-01853414="" src="/text-editor-icons/icon-text-h1.svg" alt=""></button><button data-v-617df324="" class="ufo--text-editor-button"><img data-v-01853414="" src="/text-editor-icons/icon-text-h2.svg" alt=""></button><button data-v-617df324="" class="ufo--text-editor-button"><img data-v-01853414="" src="/text-editor-icons/icon-text-p.svg" alt=""></button> <div data-v-617df324="" class="toolbar-separator"></div> <!----> <button data-v-617df324="" class="ufo--text-editor-button"><img data-v-01853414="" src="/text-editor-icons/icon-text-left.svg" alt=""></button><button data-v-617df324="" class="ufo--text-editor-button"><img data-v-01853414="" src="/text-editor-icons/icon-text-center.svg" alt=""></button><button data-v-617df324="" class="ufo--text-editor-button"><img data-v-01853414="" src="/text-editor-icons/icon-text-right.svg" alt=""></button> <div data-v-617df324="" class="toolbar-separator"></div> <button data-v-617df324="" class="ufo--text-editor-button link"><img data-v-01853414="" data-v-617df324="" src="/text-editor-icons/icon-text-link.svg" alt=""></button> <!----> <div data-v-617df324="" class="toolbar-separator"></div> <button data-v-617df324="" class="ufo--text-editor-button style-panel"><img data-v-01853414="" data-v-617df324="" src="/text-editor-icons/icon-style.svg" alt=""></button> <!----></div> <div class="ufo--text-area"><div contenteditable="true" tabindex="0" class="ProseMirror"><h1>MaKenna Berger</h1><p><br></p><h2>Research + Design</h2></div></div></div></div> <button class="e-btn--edit e-btn--edit-large e-btn--update-media">Update</button></div></div></div> <!----> <div class="ufo--user-projects-list"><div class="ufo--page"> <!----> <!----></div> <div class="ufo--user-projects" style="--h1Font:&quot;Muli&quot;; --h1Color:#424242; --h1Size:56px; --h1Height:62px; --h1Weight:bold; --h1Style:normal; --h2Font:&quot;Muli&quot;; --h2Color:#424242; --h2Size:36px; --h2Height:39px; --h2Weight:bold; --h2Style:normal; --p1Font:&quot;Muli&quot;; --p1Color:#424242; --p1Size:24px; --p1Height:36px; --p1Weight:normal; --p1Style:normal; --projectTitleFont:&quot;Muli&quot;; --projectTitleColor:null; --projectTitleSize:24px; --projectTitleHeight:34px; --projectTitleWeight:normal; --projectTitleStyle:normal; --projectSubTitleFont:&quot;Muli&quot;; --projectSubTitleColor:null; --projectSubTitleSize:24px; --projectSubTitleHeight:34px; --projectSubTitleWeight:normal; --projectSubTitleStyle:normal; --buttonFont:&quot;Muli&quot;; --buttonColor:#282a2b; --buttonSize:14px; --buttonHeight:17px; --buttonWeight:normal; --buttonStyle:normal; --borderColor:#282a2b33;"><div class="project-list-type public"><span>My Case Studies</span> <button tooltip="Create projects first to rearrange" tooltip-position="left" class="btn btn--primary btn--mini thumbnail-layout-button">Change Thumbnail Layout</button> <button tooltip="Create projects first to rearrange" tooltip-position="left" class="btn btn--primary btn--mini rearrange-button">Rearrange</button></div> <div class="projects-list"><div data-pi="0" class="project title-is--hidden title-is-- thumbnail-is--small title-align-- title-justify-- title-is--light"><!----> <div class="project-layer"><div class="project-edit-trigger"><span class="trigger-label">Options</span> <ul class="project-edit-nav"><li class="thumbnail">Set Thumbnail</li> <li class="remove-thumbnail">Remove Thumbnail</li> <li class="context-separator"></li> <li class="review">Ask for Review</li> <li class="set-password">Set Password</li> <li class="publish">Publish</li> <li class="context-separator"></li> <li class="duplicate">Duplicate</li> <li class="delete">Delete</li></ul></div> <div class="btn btn--primary">Edit case study</div> <div class="project-status-display"><span class="draft">
+                        Draft
+                    </span> <!----></div></div> <div class="project-name"><div class="ufo--project-title-container"><!----> <textarea rows="1" class="project-title" style="--projectTitleFont:&quot;Muli&quot;; --projectTitleColor:null; --projectTitleSize:24px; --projectTitleHeight:34px; --projectTitleWeight:normal; --projectTitleStyle:normal; overflow: hidden; overflow-wrap: break-word;"></textarea></div> <div class="ufo--project-title-container"><!----> <textarea rows="1" class="project-subtitle" style="--projectSubTitleFont:&quot;Muli&quot;; --projectSubTitleColor:null; --projectSubTitleSize:24px; --projectSubTitleHeight:34px; --projectSubTitleWeight:normal; --projectSubTitleStyle:normal; overflow: hidden; overflow-wrap: break-word;"></textarea></div></div> <div class="image-container" style="background-color: rgb(222, 251, 254);"><img src="https://storage.googleapis.com/uxfolio/60306386ff31b100033f52e5/6030653dff31b100033f52e8/VZJKNFDubWcINfiB.png"></div></div><div data-pi="1" class="project title-is--hidden title-is-- thumbnail-is--small title-align-- title-justify-- title-is--light"><!----> <div class="project-layer"><div class="project-edit-trigger"><span class="trigger-label">Options</span> <ul class="project-edit-nav"><li class="thumbnail">Set Thumbnail</li> <li class="remove-thumbnail">Remove Thumbnail</li> <li class="context-separator"></li> <li class="review">Ask for Review</li> <li class="set-password">Set Password</li> <li class="publish">Publish</li> <li class="context-separator"></li> <li class="duplicate">Duplicate</li> <li class="delete">Delete</li></ul></div> <div class="btn btn--primary">Edit case study</div> <div class="project-status-display"><span class="draft">
+                        Draft
+                    </span> <!----></div></div> <div class="project-name"><div class="ufo--project-title-container"><!----> <textarea rows="1" class="project-title" style="--projectTitleFont:&quot;Muli&quot;; --projectTitleColor:null; --projectTitleSize:24px; --projectTitleHeight:34px; --projectTitleWeight:normal; --projectTitleStyle:normal; overflow: hidden; overflow-wrap: break-word;"></textarea></div> <div class="ufo--project-title-container"><!----> <textarea rows="1" class="project-subtitle" style="--projectSubTitleFont:&quot;Muli&quot;; --projectSubTitleColor:null; --projectSubTitleSize:24px; --projectSubTitleHeight:34px; --projectSubTitleWeight:normal; --projectSubTitleStyle:normal; overflow: hidden; overflow-wrap: break-word;"></textarea></div></div> <div class="image-container" style="background-color: rgb(33, 34, 39);"><img src="https://storage.googleapis.com/uxfolio/60306386ff31b100033f52e5/606644551403e80003b8ead6/wPtfC4li6LKnwfEa.png"></div></div> <div class="project add-project title-is--hidden title-is-- thumbnail-is--small"><div class="add-project-content"><div class="add-sign"></div> <div class="title">Working on an awesome case study?</div> <div class="subtitle"> Start documenting it now! It will be quicker to finalize your case study later on.</div> <button class="btn btn--primary">Add new case study</button></div></div></div></div></div></div></div> <div class="profile-footer profile_theme_five" style="--borderColor:#42424233; --bgColor:#FFFFFF; --buttonColor:#282a2b;"><div class="ufo--container"><div class="profile-footer-content"><a href="https://www.instagram.com/healthdesigndigest/" target="_blank" class="footer-url">
+                            instagram
+                        </a><a href="https://www.linkedin.com/in/makennaberger/" target="_blank" class="footer-url">
+                            linkedin
+                        </a><!----><!----><!----></div></div></div> <!----></div> <!----></div> <!----> <!----></div>
+	</main>
+
+    <script src="/dist/bundle-891f53b68bdd57bfe5ebdf5006891fbe.js"></script>
+<script type="text/javascript" id="">var _dcq=_dcq||[],_dcs=_dcs||{};_dcs.account="2607659";(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="//tag.getdrip.com/2607659.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+
+<script type="text/javascript" id="">(function(){function d(b){return function(a){return-1==b.filter(e).map(f).indexOf(a)}}function e(b){return"gtm.formSubmit"===b.event}function f(b){return b["gtm.element"].name}function g(b){return{name:b,history:c[b]||[]}}function h(b){return 0<b.history.length}if("undefined"!==typeof document.querySelectorAll){window.addEventListener("beforeunload",function(b){Object.keys(c).filter(d(window.dataLayer)).map(g).filter(h).forEach(function(a){window.dataLayer.push({event:"formAbandonment",eventCategory:"Form Abandonment",
+eventAction:a.history.join(" \x3e ")})})});var c={};window.addEventListener("load",function(){document.addEventListener("change",function(b){var a=b.target;a&&a.tagName&&("INPUT"==a.tagName.toUpperCase()||"TEXTAREA"==a.tagName.toUpperCase()||"SELECT"==a.tagName.toUpperCase())&&(b=a.getAttribute("name"),(a=a.form)&&b&&(a=a.getAttribute("name"),"undefined"==typeof c[a]&&(c[a]=[]),c[a].slice(-1)!=b&&c[a].push(b)))})})}})();</script>
+
+
+<link rel="stylesheet" type="text/css" href="/gdpr/css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script src="/gdpr/js/templates.js"></script>
+<script src="/gdpr/js/script.js"></script>
+<script src="/gdpr/langs/en.js"></script>
+
+<button id="gdpr-settings-button" style="display: none;" class="gdpr-cookie-notice-settings-button">GDPR</button>
+
+<script type="text/javascript">
+    gdprCookieNotice({
+        locale: 'en', //This is the default value
+        timeout: 500, //Time until the cookie bar appears
+        expiration: 365, //This is the default value, in days
+        domain: '.uxfol.io', //If you run the same cookie notice on all subdomains, define the main domain starting with a .
+        implicit: true, //Accept cookies on page scroll automatically
+        statement: '/privacy-policy', //Link to your cookie statement page
+        performance: ['JSESSIONID'], //Cookies in the performance category.
+        analytics: ['ga'], //Cookies in the analytics category.
+        marketing: ['SSID'] //Cookies in the marketing category.
+    });
+</script>
+
+
+<script type="text/javascript" id="">window.fwSettings={widget_id:67000001817};!function(){if("function"!=typeof window.FreshworksWidget){var a=function(){a.q.push(arguments)};a.q=[];window.FreshworksWidget=a}}();</script>
+<script type="text/javascript" id="" src="https://widget.freshworks.com/widgets/67000001817.js"></script><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="https://vars.hotjar.com/box-25a418976ea02a6f393fbbe77cec94bb.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><div id="freshworks-container" data-html2canvas-ignore="true" style="width: 0px; height: 0px; bottom: 0px; right: 0px; z-index: 2147483647;"><div aria-live="polite"><iframe allowfullscreen="" id="launcher-frame" data-testid="launcher-frame" style="left: 16px; bottom: 16px; border: none; position: fixed; min-width: 104px; max-width: 156px; height: 56px; z-index: 2147483000; visibility: visible;"></iframe><iframe allowfullscreen="" id="lightbox-frame" data-testid="lightbox-frame" style="display: none;"></iframe></div></div><iframe title="FreshworksWidget" id="freshworks-frame" data-html2canvas-ignore="true" style="display: none;"></iframe></body><loom-container id="lo-engage-ext-container"><div></div><loom-shadow classname="resolved"></loom-shadow></loom-container>
